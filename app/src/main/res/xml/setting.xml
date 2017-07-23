@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:key="root_screen">
+
+    <PreferenceCategory
+            android:title="设置">
+
+        <EditTextPreference
+                android:defaultValue="5"
+                android:key="waterPrice"
+                android:summary="默认路径为/sdcard/outfile.pcm"
+                android:title="水价"/>
+
+        <EditTextPreference
+            android:defaultValue="0.5"
+            android:key="ePrice"
+            android:summary="0.5"
+            android:title="电价"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

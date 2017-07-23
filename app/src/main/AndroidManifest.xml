@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dashu.buyer">
+
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 监听网络的变化 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 设备休眠 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- sd卡存储 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 摄像头 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 通知震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".BmobApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo2"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".buyer.UserMainActivity" />
+        <activity
+            android:name=".SystemMainActivity"
+            android:theme="@style/Base.Theme.DesignDemo" />
+        <activity android:name=".EditUserActivity" />
+        <activity android:name=".seller.SellerMainActivity" />
+        <activity android:name=".UpdateUserActivity" />
+        <activity android:name=".ShopCarActivity" />
+        <activity
+            android:name=".buyer.GoodsDetailActivity"
+            android:windowSoftInputMode="stateHidden|stateUnchanged|adjustResize" />
+        <activity android:name=".seller.GoodsEditActivity" />
+        <activity android:name=".Setting" />
+        <activity android:name=".seller.AddGoodsActivity" />
+        <activity android:name=".buyer.BookActivity" />
+        <activity android:name=".im.ui.ChatActivity" />
+        <activity android:name=".GoodsFlowActivity" />
+        <activity android:name=".OrderActivity" />
+
+        <!-- 设置bmob appkey -->
+        <meta-data
+            android:name="Bmob_APP_KEY"
+            android:value="0e2c3306eda5c9e272134925585220b5" />
+        <!-- android:value="9e34a7630e8b39c46a86253dc59c789d" /> -->
+        <!-- bmobim end -->
+
+        <receiver android:name="cn.bmob.newim.core.ConnectChangeReceiver">
+            <intent-filter>
+                <action android:name="cn.bmob.action.RECONNECT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="cn.bmob.newim.core.service.BmobIMService"
+            android:process=":bmobcore" />
+        <service
+            android:name="cn.bmob.newim.core.service.NotifyService"
+            android:process=":bmobcore" />
+        <service android:name="cn.bmob.newim.core.service.ReConnectService" />
+        <service android:name="cn.bmob.newim.core.service.HeartBeatService" />
+
+        <receiver
+            android:name=".im.MessageReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.bmob.im.action.MESSAGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".UserInfoActivity"
+            android:label="@string/title_activity_user_info"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".buyer.OrderDetailActivity"
+            android:label="@string/title_activity_order_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".seller.SellerOrderDetailActivity"
+            android:label="@string/title_activity_order_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".buyer.OrderConfirmActivity"
+            android:label="@string/title_activity_order_confirm"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".buyer.RefundActivity" />
+        <activity android:name=".buyer.SearchActivity" />
+        <activity
+            android:name=".buyer.AccountInfoActivity"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity android:name=".admin.AdminMainActivity" />
+        <activity android:name=".admin.KefuActivity" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".seller.SellerCommentActivity" />
+        <activity android:name=".admin.ChatLogActivity" />
+        <activity android:name=".admin.BuyerActivity" />
+        <activity android:name=".admin.SellerActivity" />
+        <activity android:name=".admin.InfoActivity"></activity>
+    </application>
+
+</manifest>

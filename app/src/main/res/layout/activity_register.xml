@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/email_login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_weight="1"
+            android:src="@mipmap/logo2" />
+
+        <Spinner
+            android:id="@+id/spinner_role"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
+            android:entries="@array/role" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/editText_input_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入手机号"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="name"
+                android:imeOptions="actionUnspecified"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/icard_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/editText_input_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入身份证"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="card"
+                android:imeOptions="actionUnspecified"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:id="@+id/editText_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="昵称"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="password"
+                android:imeOptions="actionUnspecified"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:id="@+id/editText_input_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入密码"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="password"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:id="@+id/editText_input_double_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="重复密码"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="repass"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+            <Button
+                android:id="@+id/button_register_ok"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button"
+                android:text="注册"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/button_register_cancel"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="24dp"
+                android:background="@drawable/button"
+                android:text="登录"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

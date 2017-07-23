@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorWhite"
+    android:gravity="right"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_no_result"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:text="@string/no_shoppinggoods"
+        android:layout_height="100dp" />
+
+
+    <ListView
+        android:id="@+id/listView_tobuy"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_weight="1"
+        android:dividerHeight="2dp"></ListView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/main_theme_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_total_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="数量总计"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textView_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="金额合计"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/button_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="@color/main_theme_color"
+            android:text="结 算"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

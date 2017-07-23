@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/checkbox"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_checkbox"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/checkbox_checked"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/seller_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/bg_gray"
+            android:text="@string/detail_brief_seller"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+    <com.dashu.buyer.view.ExpandedListView
+        android:id="@+id/lv_cart_goods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"></com.dashu.buyer.view.ExpandedListView>
+</LinearLayout>

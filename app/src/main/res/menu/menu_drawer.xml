@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="顾客管理">
+        <menu>
+            <item
+                android:checkable="true"
+                android:icon="@drawable/hat"
+                android:id="@+id/build_customer"
+                android:title="添加顾客信息"/>
+        </menu>
+    </item>
+
+
+    <item android:title="代购管理">
+        <menu>
+            <item
+                android:id="@+id/build_seller"
+                android:icon="@drawable/home"
+                android:checkable="true"
+                android:title="添加代购者信息"/>
+        </menu>
+    </item>
+
+    <item android:title="客服管理">
+        <menu>
+            <item
+                android:checkable="true"
+                android:id="@+id/person_complain"
+                android:icon="@drawable/id"
+                android:title="客户投诉建议"/>
+        </menu>
+    </item>
+</menu>

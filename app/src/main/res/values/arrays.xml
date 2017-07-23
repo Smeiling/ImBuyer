@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="type_titles">
+        <item>彩妆</item>
+        <item>护肤品</item>
+        <item>香水</item>
+    </string-array>
+    <string-array name="type_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="user_function">
+        <item>收藏</item>
+        <item>加入购物车</item>
+        <item>和店家聊聊</item>
+    </string-array>
+    <string-array name="user_function_seller">
+        <item>收藏</item>
+        <item>加入购物车</item>
+    </string-array>
+
+    <string-array name="collection_function">
+        <item>删除</item>
+        <item>加入购物车</item>
+    </string-array>
+    <string-array name="refund_reason">
+        <item>下错单</item>
+        <item>商品未收到</item>
+        <item>质量不好</item>
+        <item>其他</item>
+    </string-array>
+
+    <string-array name="search_type">
+        <item>商品</item>
+        <item>代购商家</item>
+    </string-array>
+</resources>
